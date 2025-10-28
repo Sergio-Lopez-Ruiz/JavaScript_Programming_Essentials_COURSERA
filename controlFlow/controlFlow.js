@@ -15,6 +15,8 @@ if (userRole === "admin") {
     accessLevel = "No access granted";
 }
 
+let isAuthenticated = true;
+
 if (isLoggedIn) {
     if (userRole === "admin") {
         userMessage = "Welcome, Admin!";
@@ -39,9 +41,10 @@ switch (userType) {
         userCategory = "Unknown";
 }
 
-
+let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 
 
 console.log("Access Level:", accessLevel);
 console.log("User Message:", userMessage);
 console.log("User Category:", userCategory);
+console.log("Authentication Status:", authenticationStatus);
